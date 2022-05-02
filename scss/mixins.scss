@@ -1,0 +1,15 @@
+/* ================================= 
+            Mixins
+==================================== */
+
+@mixin mQ($arg) {
+    @media screen and (min-width: $arg) {
+        @content;        
+    }
+}
+
+@mixin mQMax($arg) {
+  @media screen and (max-width: $arg) {
+      @content;        
+  }
+}

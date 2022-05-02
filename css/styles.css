@@ -1,0 +1,760 @@
+/* ================================= 
+          Imports
+==================================== */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?tsz6fl");
+  src: url("../fonts/icomoon.eot?tsz6fl#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?tsz6fl") format("truetype"), url("../fonts/icomoon.woff?tsz6fl") format("woff"), url("../fonts/icomoon.svg?tsz6fl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e904";
+}
+
+.icon-chevron-up:before {
+  content: "\e908";
+}
+
+.icon-chevron-down:before {
+  content: "\e905";
+}
+
+.icon-briefcase:before {
+  content: "\e900";
+}
+
+.icon-info-circle:before {
+  content: "\e901";
+}
+
+.icon-code:before {
+  content: "\e906";
+}
+
+.icon-arrow-right:before {
+  content: "\e907";
+}
+
+.icon-cast_for_education:before {
+  content: "\e902";
+}
+
+.icon-contact_mail:before {
+  content: "\e903";
+}
+
+/* ================================= 
+            Mixins
+==================================== */
+/* ================================= 
+          Page Styles
+==================================== */
+.header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/duo_duomo.jpg);
+  height: 10vh;
+  background-position: 0% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: clip;
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  top: -1.5%;
+  margin-left: -72px;
+  color: white;
+  font-size: x-large;
+}
+
+@media screen and (min-width: 768px) {
+  .header-text {
+    margin-left: -65px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header-text {
+    margin-left: -34px;
+  }
+}
+
+#coding {
+  margin-left: -110px;
+}
+
+@media screen and (max-width: 365px) {
+  #coding {
+    margin-left: -42px;
+  }
+}
+
+#scs {
+  margin-left: -145px;
+}
+
+@media screen and (max-width: 307px) {
+  #scs {
+    margin-left: -67px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #scs {
+    margin-left: -130px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #scs {
+    margin-left: -100px;
+  }
+}
+
+.about-me-bg, .coding-examples-bg,
+.scs-scheme-bg {
+  background: linear-gradient(rgba(243, 243, 243, 0.8));
+  height: 90vh;
+  width: 100%;
+}
+
+.about-me img {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -101px;
+  left: 50%;
+  top: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me img {
+    margin-left: -81px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-me img {
+    margin-left: -51px;
+  }
+}
+
+.about-me-text {
+  width: 100%;
+  margin-top: 20em;
+  text-align: center;
+  padding: 0 30px 60px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-text {
+    padding: 0 20px 60px 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-me-text {
+    padding: 0 20px 60px 120px;
+  }
+}
+
+.about-me-text p,
+.about-me-text a,
+.coding-examples-text p,
+.scs-scheme p {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.about-me-text a:link {
+  color: blue;
+}
+
+.about-me-text a:visited {
+  color: #b30000;
+}
+
+.about-me-text a:hover {
+  color: #b30000;
+}
+
+.about-me-text a:active {
+  color: blue;
+}
+
+.coding-examples-text {
+  position: relative;
+  text-align: center;
+  top: 25%;
+  padding: 30px 10px 30px 50px;
+}
+
+.scs-scheme {
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .scs-scheme {
+    margin-left: 15px;
+    padding: 30px 50px 30px 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .scs-scheme {
+    margin-left: 90px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scs-scheme {
+    padding: 30px 100px 30px 100px;
+  }
+}
+
+.scs-scheme h2 {
+  font-size: xx-large;
+}
+
+.scs-scheme .treehouse-link {
+  font-size: xx-large;
+}
+
+.treehouse-link a:link {
+  color: blue;
+}
+
+.treehouse-link a:visited {
+  color: #b30000;
+}
+
+.treehouse-link a:hover {
+  color: #b30000;
+}
+
+.treehouse-link a:active {
+  color: blue;
+}
+
+.about-nm-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-nm-flex a img {
+  max-width: 50px;
+  height: auto;
+}
+
+/* ================================= 
+          Base Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Oswald', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================================= 
+          Navbar Styles
+==================================== */
+.logo, .nav-links,
+.nav-icons, .logo p,
+.logo-md p {
+  display: none;
+}
+
+li {
+  display: none;
+}
+
+#menu-btn {
+  z-index: 2;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: fixed;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#menu-btn:hover {
+  background-color: #e2e2e2;
+}
+
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+/* ================================= 
+          Hero Image Styles
+==================================== */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/duo_duomo.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: clip;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 52px;
+}
+
+.hero-text p {
+  font-size: 32px;
+}
+
+.scroll-down {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: -3%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: large;
+}
+
+.scroll-down a:link {
+  color: white;
+}
+
+.scroll-down a:visited {
+  color: white;
+}
+
+.scroll-down a:hover {
+  color: #b30000;
+}
+
+.scroll-down a:active {
+  color: white;
+}
+
+.scroll-down a p {
+  margin-bottom: 10px;
+}
+
+/* ================================= 
+          Portfolio Styles
+==================================== */
+.pf {
+  position: relative;
+  z-index: 1;
+}
+
+.cards-background {
+  background-color: white;
+}
+
+.portfolio-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  width: 85vw;
+  padding: 15px 0;
+}
+
+.project {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: large;
+}
+
+.project a:link {
+  color: white;
+}
+
+.project a:visited {
+  color: white;
+}
+
+.project a:hover {
+  color: white;
+}
+
+.project a:active {
+  color: white;
+}
+
+.project > a > img {
+  width: 85vw;
+}
+
+.project a p span {
+  color: white;
+  vertical-align: text-bottom;
+}
+
+.project:hover {
+  background-color: #b30000;
+  border-color: #b30000;
+}
+
+/* ================================= 
+          Contact Form Styles
+==================================== */
+.contact-grid {
+  display: grid;
+  background-color: #e7e7e7;
+}
+
+.contact-text h1 {
+  font-size: 40px;
+}
+
+.contact-text p,
+.contact-text a {
+  font-weight: 300;
+  font-size: larger;
+}
+
+.contact-text a:link {
+  color: blue;
+}
+
+.contact-text a:visited {
+  color: #b30000;
+}
+
+.contact-text a:hover {
+  color: #b30000;
+}
+
+.contact-text a:active {
+  color: blue;
+}
+
+.contact-text {
+  text-align: center;
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: none;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form-pt-two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#fname, #lname {
+  width: 49%;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 40px;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #29df00;
+  border-color: black;
+}
+
+.scroll-up-container {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+}
+
+.scroll-up {
+  text-align: center;
+  position: relative;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  margin-top: 3rem;
+  width: fit-content;
+}
+
+.scroll-up a:link {
+  color: white;
+}
+
+.scroll-up a:visited {
+  color: white;
+}
+
+.scroll-up a:hover {
+  color: #b30000;
+}
+
+.scroll-up a:active {
+  color: white;
+}
+
+.scroll-up a p {
+  margin-bottom: 10px;
+}
+
+/* ================================= 
+          Media Queries
+==================================== */
+@media screen and (min-width: 576px) {
+  .portfolio {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .project > a > img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .logo-md, .nav-links-md {
+    display: block;
+  }
+  .logo-md p {
+    display: block;
+  }
+  li {
+    display: block;
+  }
+  .navbar-md {
+    background-color: white;
+    height: 100vh;
+    float: left;
+    width: auto;
+    padding: 5px;
+    border: 1px solid black;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 2;
+  }
+  .logo-md {
+    fill: goldenrod;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;
+    height: 100px;
+    width: auto;
+  }
+  .logo-md p {
+    display: block;
+    margin: 0px;
+    line-height: 113px;
+    font-size: xx-large;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+  .nav-links-md {
+    text-align: center;
+  }
+  .nav-links-md ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .nav-links-md ul li a:hover {
+    color: #b30000;
+  }
+  .nav-links-md ul li a span {
+    font-size: x-large;
+  }
+  #menu-btn {
+    display: none;
+  }
+  .hero-text, .scroll-down,
+  .scroll-up {
+    margin-left: 1.5rem;
+  }
+  .portfolio {
+    margin-left: 3rem;
+  }
+  .form-container {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo, .nav-links {
+    display: block;
+  }
+  .navbar-md {
+    display: none;
+  }
+  .logo p {
+    display: block;
+  }
+  li {
+    display: block;
+  }
+  .navbar {
+    background-color: white;
+    height: 100vh;
+    float: left;
+    width: auto;
+    padding: 5px;
+    border: 1px solid black;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 2;
+  }
+  .logo {
+    fill: goldenrod;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;
+    height: 100px;
+    width: auto;
+  }
+  .logo p {
+    display: block;
+    margin: 0px;
+    line-height: 113px;
+    font-size: xx-large;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+  .nav-links {
+    text-align: center;
+  }
+  .nav-links ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #contact-me-li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .nav-links ul li a:hover {
+    color: #b30000;
+  }
+  .nav-links ul li a span {
+    font-size: xx-large;
+  }
+  #menu-btn {
+    display: none;
+  }
+  .hero-text, .scroll-down,
+  .scroll-up {
+    margin-left: 4.5rem;
+  }
+  .portfolio {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 8rem;
+  }
+  .project {
+    text-align: start;
+    font-size: x-large;
+  }
+  .project h3,
+  .project a p {
+    margin-left: 20px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .contact-text {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: start;
+    margin-left: 140px;
+  }
+  .form-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-text, .scroll-down,
+  .scroll-up {
+    margin-left: 4.5rem;
+  }
+  .portfolio {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 8rem;
+  }
+}
