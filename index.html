@@ -52,18 +52,36 @@
             </div>
         </nav>
         <!-- Side Navbar 767.99px or Less -->
-        <button type="button" id="menu-btn">
+        <button type="button" id="menu-btn" onclick="show()">
             <div class="burger"></div>
             <div class="burger"></div>
             <div class="burger"></div>
         </button> 
+        <nav class="navbar-toggle" id="navbar">
+            <a href="index.html">
+                <div class="logo-toggle">
+                    <p>JG</p>
+                </div>
+            </a>
+            <div class="nav-links-toggle">
+                <ul>
+                    <li><a href="html/about-me.html">About Me</a></li>
+                    <li><a href="#portfolio">My Portfolio</a></li>
+                    <li><a href="html/coding-examples.html">Coding Examples</a></li>
+                    <li><a href="html/scs-scheme.html">SCS Scheme</a></li>
+                    <li id="contact-me-li"><a href="#contact">Contact Me</a></li>
+                    <li><a href="https://github.com/JamesGreengrass" target="_blank"><span class="icon-github"></span></a></li>
+                </ul>
+            </div>
+        </nav>
         <!-- Main Content -->
         <main>
             <!-- Hero Image -->
             <section>
                 <div class="hero-image">
-                    <div class="hero-text">
-                        <h1>My Name Is James Greengrass</h1>
+                    <div class="hero-text text-type">
+                        <h1>Hello,</h1>
+                        <h2>My Name Is James Greengrass</h2>
                         <p>I'm A Web Developer</p>
                     </div>
                     <div class="scroll-down">
@@ -195,5 +213,14 @@
                 </div>
             </section>
         </main>
+        <!-- jQuery, JavaScript and Plugins -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+        <script>
+            new TypeIt('.text-type', {
+                speed: 45,
+            }).go();
+        </script>
     </body>
 </html>
