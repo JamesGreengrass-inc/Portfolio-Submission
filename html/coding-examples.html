@@ -52,12 +52,29 @@
             </div>
         </nav>
         <!-- Side Navbar 767.99px or Less -->
-        <button type="button" id="menu-btn">
+        <button type="button" id="menu-btn" onclick="show()">
             <div class="burger"></div>
             <div class="burger"></div>
             <div class="burger"></div>
         </button>
-        
+        <!-- Side Navbar Slide-Out -->
+        <nav class="navbar-toggle" id="navbar">
+            <a href="index.html">
+                <div class="logo-toggle">
+                    <p>JG</p>
+                </div>
+            </a>
+            <div class="nav-links-toggle">
+                <ul>
+                    <li><a href="about-me.html">About Me</a></li>
+                    <li><a href="../index.html#portfolio">My Portfolio</a></li>
+                    <li><a href="coding-examples.html">Coding Examples</a></li>
+                    <li><a href="scs-scheme.html">SCS Scheme</a></li>
+                    <li id="contact-me-li"><a href="../index.html#contact">Contact Me</a></li>
+                    <li><a href="https://github.com/JamesGreengrass" target="_blank"><span class="icon-github"></span></a></li>
+                </ul>
+            </div>
+        </nav>
         <main>
             <!-- Header -->
             <div class="header-image">
@@ -73,5 +90,8 @@
                 </div>
             </div>
         </main>
+        <!-- jQuery, JavaScript and Plugins -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

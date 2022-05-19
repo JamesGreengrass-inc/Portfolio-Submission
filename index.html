@@ -57,6 +57,7 @@
             <div class="burger"></div>
             <div class="burger"></div>
         </button> 
+        <!-- Side Navbar Slide-Out -->
         <nav class="navbar-toggle" id="navbar">
             <a href="index.html">
                 <div class="logo-toggle">
@@ -187,7 +188,7 @@
                     </div>
                     <!-- Contact Form -->
                     <div class="form-container">
-                        <form>
+                        <form name="myForm" onsubmit="return validateForm()" action="mailto:james.greengrass@netmatters-scs.com">
                             <div class="contact-form">
                                 <input type="text" id="fname" name="firstname" placeholder="First Name...">
                                 <input type="text" id="lname" name="lastname" placeholder="Last name...">

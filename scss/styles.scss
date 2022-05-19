@@ -15,6 +15,11 @@
 
 html {
     font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -46,7 +51,7 @@ li {
 }
 
 #menu-btn.active {
-    left: 115px;
+    left: 150px;
 }
 
 #menu-btn:hover {
@@ -70,7 +75,7 @@ li {
     align-items: flex-start;
     position: fixed;
     z-index: 2;
-    left: -110px;
+    left: -145px;
     transition: .4s;
 }
 
@@ -91,7 +96,7 @@ li {
     display: block;
     margin: 0px;
     line-height: 113px; 
-    font-size: xx-large;
+    font-size: 55px;
 } 
 
 .navbar-toggle a {
@@ -107,6 +112,7 @@ li {
     margin-top: 20px;
     margin-bottom: 20px;
     display: block;
+    font-size: 22px;
 }
 
 #contact-me-li {
@@ -229,7 +235,12 @@ li {
     border: 1px solid black;
     border-radius: 3px;
     font-size: large;
+    transition: 0.4s;
 } 
+
+.project:hover {
+    transform: translateY(-50px)
+}
 
 .project a:link {
     color: white;
