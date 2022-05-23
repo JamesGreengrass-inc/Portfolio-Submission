@@ -36,6 +36,10 @@ a {
     display: none;
 }
 
+.logo:hover, .logo-md:hover, .logo-toggle:hover {
+    color: rgb(179, 0, 0);
+}
+
 li {
     display: none;
 }
