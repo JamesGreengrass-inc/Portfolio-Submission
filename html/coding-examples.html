@@ -84,9 +84,9 @@
             </div>
             <!-- Main Page Content -->
             <div class="coding-examples-bg">
-                <h1 class="coding-examples-header">Coding Example 1.</h1>
+                <h1 class="coding-examples-text">Coding Example 1.</h1>
                 <div class="img-container">
-                    <img src="../img/Coding-example.png">
+                    <img src="../img/Coding-example.png" alt="Coding Example">
                 </div>
                 <div class="coding-examples-text">
                     <h1>JavaScript Code Snippet</h1>
@@ -94,6 +94,36 @@
                     <p>To see this in action for yourself press ctrl + shift + I on Windows/command-option-I on a Mac and expand the elements window until you see the burger menu.</p>
                     <p>I've used this to make the website operate in a much smoother, user friendly way on mobile devices.</p>
                     <p>The last thing anyone wants is a navbar taking up half their screen with no way to close it!</p>
+                </div>
+                <div class="coding-examples-text">
+                    <h3 class="coding-h3">SQL Example</h3>
+                    <div class="img-container-two">
+                        <img class="database" src="../img/movie-database.png" alt="Movie Database">
+                    </div>
+                    <div class="img-container-two">
+                        <img src="../img/SQL Example.PNG" alt="SQL Query">
+                    </div>
+                    <p>
+                        I was tasked with creating a query that included a sub query with a formatted output from a selection of databases.<br>
+                        I chose to try and find all the movies that were not in English, with a rating higher than Lawrence of Arabia.<br> 
+                        Included are the table structure, and my SQL query.
+                    </p>
+                    <p>
+                        I selected the movie title, language and year as these would give me the basic information I was looking for, as well as the value of year to order the results by.<br>
+                        I included the review stars to allow me to see what the ratings for the movies are.
+                        "WHERE NOT" allows me to filter out all the results that are in English.
+                    </p>
+                    <p>
+                        The sub query runs first and finds the rating for the movie with the ID 903, Lawrence of Arabia.<br>
+                        It then uses this rating to find all the results that match the criteria and have a higher rating.
+                        Finally, I ordered the data set by year, just to make it easier to read.
+                    </p>
+                    <p>
+                        Here is the outcome of the query:
+                    </p>
+                    <div class="img-container-two">
+                        <img src="../img/SQL Result.PNG" alt="SQL Result">
+                    </div>
                 </div>
             </div>
         </main>
