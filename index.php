@@ -192,7 +192,7 @@
                     </div>
                     <!-- Contact Form -->
                     <div class="form-container">
-                        <form name="myForm" onsubmit="return validateForm()" action="mailto:james.greengrass@netmatters-scs.com">
+                        <form name="myForm" onsubmit="return validateForm()">
                             <div class="contact-form">
                                 <input type="text" id="fname" name="firstname" placeholder="First Name...">
                                 <input type="text" id="lname" name="lastname" placeholder="Last name...">
