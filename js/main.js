@@ -1,3 +1,8 @@
+const form = document.querySelector("form");
+const email = document.getElementById("email");
+const emailError = document.querySelector("#mail + span.error");
+var validRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
+
 function show() {
     document.getElementById('navbar').classList.toggle('active');
     document.getElementById('menu-btn').classList.toggle('active');
@@ -8,7 +13,6 @@ function validateForm() {
     let lName = document.forms["myForm"]["lname"].value;
     let subject = document.forms["myForm"]["subject"].value;
     let message = document.forms["myForm"]["message"].value;
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (fName === "" || lName === "") {
         alert("First and last names must be filled out");
         return false;

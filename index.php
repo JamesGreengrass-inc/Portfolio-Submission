@@ -191,17 +191,23 @@
                         <p>I'll get back to you as soon as I can.</p>
                     </div>
                     <!-- Contact Form -->
+                    <?php include('php/server-side.php'); ?>
                     <div class="form-container">
-                        <form name="myForm" onsubmit="return validateForm()">
+                        <form name="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()">
                             <div class="contact-form">
-                                <input type="text" id="fname" name="firstname" placeholder="First Name...">
-                                <input type="text" id="lname" name="lastname" placeholder="Last name...">
+                                <input type="text" id="fname" name="fname" placeholder="First Name..." required>
+                                <span class="error"><?php echo $fnameErr;?></span>
+                                <input type="text" id="lname" name="lname" placeholder="Last name..." required>
+                                <span class="error"><?php echo $lnameErr;?></span>
                             </div>
                             <div class="contact-form-pt-two">
-                                <input type="text" id="email" name="email" placeholder="Your Primary Email...">
-                                <input type="text" id="subject" name="subject" placeholder="Subject of your message...">
-                                <textarea id="message" name="message" placeholder="Your message..."></textarea>
-                                <input type="submit" value="Submit">
+                                <input type="text" id="email" name="email" placeholder="Your Primary Email..." required>
+                                <span class="error"><?php echo $emailErr;?></span>
+                                <input type="text" id="subject" name="subject" placeholder="Subject of your message..." required>
+                                <span class="error"><?php echo $subjectErr;?></span>
+                                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+                                <span class="error"><?php echo $messageErr;?></span>
+                                <input type="submit" value="Submit" name="Submit">
                             </div>
                         </form>
                     </div>
