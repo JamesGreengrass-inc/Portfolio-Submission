@@ -3,7 +3,7 @@
 include('inc/functions.php');
 
 $fnameErr = $lnameErr = $emailErr = $subjectErr = $messageErr = "";
-$fname = $lname = $email = $subject = $message = "";
+$fname = $lname = $email = $subject = $message = $success = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -39,6 +39,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $messageErr = "Message is required";
   } else {
     $message = test_input($_POST["message"]);
+  }
+
+
+  if (PDO::prepare("INSERT INTO `jamesgre_portfolio` (`first name`, `last name`, `email`, `subject`, `message`) VALUES ('".mysql_real_escape_string($fname)."','".mysql_real_escape_string($lname)."','".mysql_real_escape_string($email)."','".mysql_real_escape_string($subject)."','".mysql_real_escape_string($message)."')")) {
+    PDOStatement::execute();
+    $success = "Success!";
+  } else {
+    echo mysql_error();
+    exit;
   }
 
 }

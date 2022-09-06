@@ -208,6 +208,7 @@
                                 <textarea id="message" name="message" placeholder="Your message..." required></textarea>
                                 <span class="error"><?php echo $messageErr;?></span>
                                 <input type="submit" value="Submit" name="Submit">
+                                <span class="error"><?php echo $success;?></span>
                             </div>
                         </form>
                     </div>

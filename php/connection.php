@@ -1,7 +1,8 @@
 <?php
+include('config/config.php');
 
 try {
-    $db = new PDO ("mysql:host=localhost;dbname=jamesgre_portfolio;port=3306", "jamesgre_jamesgreengrass", "WorkHabits2!");
+    $db = new PDO (conf::DB,conf::USER,conf::PASSWORD);
     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     echo "Connected to the database!";
 } catch(Exception $e) {
