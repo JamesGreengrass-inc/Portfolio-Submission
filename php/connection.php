@@ -11,4 +11,12 @@ try {
     exit;
 }
 
+// $sql = "";
+
+// if ($db->query($sql) === TRUE) {
+//     echo "record inserted successfully";
+// } else {
+//     echo "Error: " . $sql . "<br>" . $db->error;
+// }
+
 ?>

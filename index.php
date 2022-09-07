@@ -193,7 +193,7 @@
                     <!-- Contact Form -->
                     <?php include('php/server-side.php'); ?>
                     <div class="form-container">
-                        <form name="myForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()">
+                        <form name="myForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validateForm()">
                             <div class="contact-form">
                                 <input type="text" id="fname" name="fname" placeholder="First Name..." required>
                                 <span class="error"><?php echo $fnameErr;?></span>

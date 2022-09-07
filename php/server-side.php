@@ -1,6 +1,7 @@
 <?php
 
 include('inc/functions.php');
+include('connection.php');
 
 $fnameErr = $lnameErr = $emailErr = $subjectErr = $messageErr = "";
 $fname = $lname = $email = $subject = $message = $success = "";
@@ -17,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["lname"])) {
     $lnameErr = "Last name is required";
   } else {
-    $lname = test_input($_POST["fname"]);
+    $lname = test_input($_POST["lname"]);
     $lname = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
   }
 
@@ -41,13 +42,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = test_input($_POST["message"]);
   }
 
+  $stmt = $db->prepare("INSERT INTO Portfolio_form_user (First_Name, Last_Name, Email, `Subject`, `Message`) VALUES (?, ?, ?, ?, ?)");
+  $stmt -> bindParam($fname, $lname, $email, $subject, $message);
 
-  if (PDO::prepare("INSERT INTO `jamesgre_portfolio` (`first name`, `last name`, `email`, `subject`, `message`) VALUES ('".mysql_real_escape_string($fname)."','".mysql_real_escape_string($lname)."','".mysql_real_escape_string($email)."','".mysql_real_escape_string($subject)."','".mysql_real_escape_string($message)."')")) {
-    PDOStatement::execute();
-    $success = "Success!";
+  if($result = $stmt -> execute(array($fname, $lname, $email, $subject, $message))) {
+    echo "<h3>data stored in database successfully."
+        . " Please browse your localhost php my admin"
+        . " to view the updated data</h3>";
+
+    echo nl2br("\n$fname\n $lname\n "
+        . "$email\n $subject\n $message\n");
   } else {
-    echo mysql_error();
-    exit;
+    echo "ERROR: Hush! Sorry $sql. "
+        . PDO::errorInfo($db);
   }
 
 }
