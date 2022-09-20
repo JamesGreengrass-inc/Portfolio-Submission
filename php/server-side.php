@@ -42,10 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = test_input($_POST["message"]);
   }
 
-  $stmt = $db->prepare("INSERT INTO Portfolio_form_user (First_Name, Last_Name, Email, `Subject`, `Message`) VALUES (?, ?, ?, ?, ?)");
-  $stmt -> bindParam($fname, $lname, $email, $subject, $message);
+  $stmt = $db->prepare('INSERT INTO `jamesgre_portfolio.Portfolio_form_user` (`First_Name`, `Last_Name`, `Email`, `Subject`, `Message`) VALUES (?, ?, ?, ?, ?)');
+  $stmt->bindParam(1, $fname, PDO::PARAM_STR);
+  $stmt->bindParam(2, $lname, PDO::PARAM_STR);
+  $stmt->bindParam(3, $email, PDO::PARAM_STR);
+  $stmt->bindParam(4, $subject, PDO::PARAM_STR);
+  $stmt->bindParam(5, $message, PDO::PARAM_STR);
+  $stmt->execute();
 
-  if($result = $stmt -> execute(array($fname, $lname, $email, $subject, $message))) {
+  if($result = $stmt) {
     echo "<h3>data stored in database successfully."
         . " Please browse your localhost php my admin"
         . " to view the updated data</h3>";
